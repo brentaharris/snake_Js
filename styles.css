@@ -5,6 +5,7 @@
 
 body {
   background-color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -19,6 +20,7 @@ body {
   display: grid;
   grid-template-columns: repeat(21, 1fr);
   grid-template-rows: repeat(21, 1fr);
+  position: relative;
 }
 
 .snake {
@@ -29,4 +31,71 @@ body {
 .food {
   background-color: rgb(242, 255, 0);
   border: 0.25vmin solid black;
+}
+
+.modal-start {
+  background-color: rgb(242, 255, 0);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 25vh;
+  top: 25;
+  left: 25;
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.modal-start > h2 {
+  font-size: 2rem;
+}
+
+.modal-start > p {
+  font-size: 1.6rem;
+}
+
+.modal-start > select {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.modal-start > button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 9px;
+  font-size: 1.3rem;
+  background-color: rgb(43, 149, 249);
+  color: #fff;
+}
+
+.modal-end {
+  background-color: rgb(242, 255, 0);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 25vh;
+  top: 25;
+  left: 25;
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.modal-end > button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 9px;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  background-color: rgb(43, 149, 249);
+  color: #fff;
+}
+
+.hidden {
+  display: none;
 }

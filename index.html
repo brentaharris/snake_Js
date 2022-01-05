@@ -9,6 +9,22 @@
   </head>
   <body>
     <div id="game-board"></div>
+
+    <div class="modal-start">
+      <h2>Welcome to Classic Snake</h2>
+      <p>Choose your difficulty</p>
+      <select>
+        <option>Easy</option>
+        <option>Harder</option>
+        <option>Hardest</option>
+      </select>
+      <button class="btn-play">Play</button>
+    </div>
+
+    <div class="modal-end hidden">
+      <h2>You lost the game!</h2>
+      <button class="btn-restart">Restart</button>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
