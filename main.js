@@ -11,8 +11,7 @@ import { outsideGrid } from "./grid.js";
 
 import { update as updateFood, draw as drawFood } from "./food.js";
 
-//todo
-//implement score
+//dom cache and variable init
 let SNAKE_SPEED = 2;
 let lastRenderTime = 0;
 let gameOver = false;
@@ -38,15 +37,12 @@ difficultyEl.addEventListener("change", () => {
   switch (difficultyEl.value) {
     case "Easy":
       SNAKE_SPEED = 2;
-      console.log(SNAKE_SPEED);
       break;
     case "Harder":
       SNAKE_SPEED = 5;
-      console.log(SNAKE_SPEED);
       break;
     case "Hardest":
       SNAKE_SPEED = 10;
-      console.log(SNAKE_SPEED);
   }
 });
 
@@ -54,12 +50,10 @@ difficultyEl.addEventListener("change", () => {
 function main(currentTime) {
   if (gameStarted) {
     if (gameOver) {
-      // modalEndEl.classList.toggle("hidden");
-      if (confirm("You lost, press OK to restart game.")) {
-        window.location = "/";
-      }
-      return;
+      //show gameover modal window
+      modalEndEl.classList.remove("hidden");
     }
+
     window.requestAnimationFrame(main);
     let secondSinceLastRender = (currentTime - lastRenderTime) / 1000;
 
@@ -80,10 +74,9 @@ function startGame() {
   main();
 }
 
+//functions
 function restart() {
-  modalEndEl.classList.toggle("hidden");
-  modalEl.classList.toggle("hidden");
-  console.log("click");
+  window.location = "/";
 }
 
 function update() {
