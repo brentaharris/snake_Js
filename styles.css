@@ -113,6 +113,28 @@ body {
   color: #fff;
 }
 
+.modal-how-to {
+  background-color: #fff;
+  color: black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  height: 60vh;
+  top: 25;
+  left: 25;
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.how-text {
+  font-size: 1.4rem;
+  margin: 10px 20px;
+  line-height: 1.5;
+}
+
 .hidden {
   display: none;
 }
