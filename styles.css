@@ -51,11 +51,16 @@ body {
   justify-content: center;
   align-items: center;
   width: 70vw;
-  height: 25vh;
+  height: 50vh;
   top: 25;
   left: 25;
   border: 3px solid black;
   border-radius: 1rem;
+}
+
+.img-snake {
+  width: 20rem;
+  height: auto;
 }
 
 .modal-start > h2 {
