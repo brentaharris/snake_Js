@@ -32,6 +32,8 @@ playBtn.addEventListener("click", startGame);
 restartBtn.addEventListener("click", restart);
 howBtn.addEventListener("click", showHowTo);
 closeHowBtn.addEventListener("click", closeHowTo);
+
+//choose difficulty
 difficultyEl.addEventListener("change", () => {
   switch (difficultyEl.value) {
     case "Easy":
@@ -47,9 +49,6 @@ difficultyEl.addEventListener("change", () => {
       console.log(SNAKE_SPEED);
   }
 });
-
-//check difficulty
-console.log(SNAKE_SPEED);
 
 //main game loop
 function main(currentTime) {
@@ -75,7 +74,7 @@ function main(currentTime) {
 
 window.requestAnimationFrame(main);
 
-function startGame(difficulty) {
+function startGame() {
   gameStarted = true;
   modalEl.classList.toggle("hidden");
   main();
